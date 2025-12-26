@@ -29,5 +29,6 @@ void DiagnosticFilter::setFilterBitmask(quint32 bitmask)
         _filterBitmask = bitmask;
     }
 
-    invalidateFilter();
+    beginFilterChange();
+    endFilterChange();
 }

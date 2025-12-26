@@ -31,3 +31,5 @@ add_library (qcustomplot ${PLOT_SRCS})
 
 target_link_libraries(qcustomplot PUBLIC ${QT_PLOT_LIB})
 
+target_compile_options(qcustomplot PRIVATE -Wno-error)
+

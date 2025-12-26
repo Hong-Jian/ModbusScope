@@ -29,7 +29,8 @@ void MbcRegisterFilter::setTab(QString tab)
         _tab = tab;
     }
 
-    invalidateFilter();
+    beginFilterChange();
+    endFilterChange();
 }
 
 void MbcRegisterFilter::setTextFilter(QString filterText)
@@ -39,7 +40,8 @@ void MbcRegisterFilter::setTextFilter(QString filterText)
         _textFilter = filterText.trimmed();
     }
 
-    invalidateFilter();
+    beginFilterChange();
+    endFilterChange();
 }
 
 bool MbcRegisterFilter::performTabFilter(int source_row, const QModelIndex &source_parent) const
